@@ -10,6 +10,8 @@
 /node_modules
 npm-debug.log
 yarn-error.log
+rsatokenkey
+rsatokenkey.pub
 
 # IDEs and editors
 .idea/
