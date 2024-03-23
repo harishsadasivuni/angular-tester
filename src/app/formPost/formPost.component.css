@@ -5,10 +5,21 @@
 form > div > label{
     text-align: center;
     margin: 4px;
+    font-weight: 600;
+    font-size: large;
 }
 .custom-submit{
     align-items: center;
     margin: 20px;
     text-align: center;
     width: -webkit-fill-available;
+}
+.custom-d-none{
+    position: absolute;
+     top: 0;
+     left: 0;
+     margin: 15%;
+}
+#alertid{
+    display: none;
 }

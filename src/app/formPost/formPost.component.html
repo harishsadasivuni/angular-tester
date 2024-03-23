@@ -1,4 +1,4 @@
-<form #loginform="ngForm" class="customform">
+<form #loginform="ngForm" class="customform" id="loginform">
   <div class="form-group">
     <label for="uID" >uID</label>
     <input type="text" class="form-control" #uID="ngModel" required name="uID" ngModel/>
@@ -16,16 +16,24 @@
   <input type="text" #mainAddress="ngModel" class="form-control" required name="mainAddress" ngModel/>
 </div>
 <div class="form-group">
-  <label for="phone">phone</label>
+  <label for="phone">Phone</label>
   <input type="text" #phone="ngModel" class="form-control" required name="phone" ngModel/>
 </div>
 <div class="form-group">
-  <label for="password">password</label>
+  <label for="password">Password</label>
   <input type="text" #password="ngModel" class="form-control" required name="password" ngModel/>
 </div>
 <div class="form-group">
-  <label for="userName">userName</label>
+  <label for="userName">Username</label>
   <input type="text" #userName="ngModel" class="form-control" required name="userName" ngModel/>
 </div>
-  <button (click)="formstaticsubmit(loginform.value)" class="btn btn-outline-primary custom-submit">Submit data to mongoDB</button>
+  <button (click)="formstaticsubmit(loginform.value); loginform.resetForm()" class="btn btn-outline-primary custom-submit">Submit data to mongoDB</button>
 </form>
+
+
+<div class="alert alert-success custom-d-none" id="alertid" #alertid role="alert">
+  <h4 class="alert-heading">Well done!</h4>
+  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+  <hr>
+  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+</div>

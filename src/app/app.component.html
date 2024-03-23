@@ -26,17 +26,23 @@ User have more than 5 cars
 <!--example for template referrence type-->
 <!-- <input type="text" #inputboxtwo/>
 <button (click)="sendhtml(inputboxtwo)">get alert</button>  -->
-<p appMyDirective>hello harish</p>
+<h2 appMyDirective class="text-center">hello Harish! Please fill the form!</h2>
 
+<app-formPost></app-formPost>
 
-<p>list of user names</p>
+<p class="text-center font-weight-bold">list of user names</p>
 <table class="table table-striped">
     <tr>
+        <th>uID</th>
         <th>Name</th>
         <th>email</th>
         <th>Address</th>
+        
     </tr>
     <tr *ngFor="let ali of Users">
+        <td>
+            {{ali.uID|json}}
+        </td>
         <td>
             {{ali.name|json}}
         </td>
@@ -49,6 +55,4 @@ User have more than 5 cars
 
     </tr>
 </table>
-<p>Please fill the below form</p>
 <router-outlet></router-outlet>
-<app-formPost></app-formPost>
